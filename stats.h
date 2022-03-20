@@ -10,10 +10,9 @@
  *****************************************************************************/
 /**
  * @file <stats.h> 
- * @brief <Add Brief Description Here >
- *	The header file of stats.c.
+ * @brief The header file of stats.c
+ *	
  * 
- * <Add Extended Description Here>
  *
  * @author <Ning Tu>
  * @date <20.03.2022 >
