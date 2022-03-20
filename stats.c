@@ -48,9 +48,9 @@ void print_statistics(int array[], int size)
 	int max, min, mean, median;
   max=find_maximum(array,size);
   min=find_minimum(array,size);
+  sort_array(array,size);
   mean=find_mean(array,size);
   median=find_median(array,size);
-  sort_array(array,size);
   printf("The minimum of the array is %d;\n",min);
   printf("The maximum of the array is %d;\n",max);
   printf("The mean of the array is %d;\n",mean);
@@ -90,7 +90,7 @@ int find_minimum(int array[], int size)
 int find_mean(int array[], int size)
 {
   int i, mean, sum=array[0];
-  for(i=0; i<size-1; i++)
+  for(i=1; i<size; i++)
   {
     sum=sum+array[i];
   }
@@ -103,7 +103,7 @@ int find_median(int array[], int size)
   int median;
   if(size%2==0)
   {
-    median=(array[size/2-1]+array[size/2])/2;
+    median=(array[size/2]+array[size/2+1])/2;
   }
   else
   {
